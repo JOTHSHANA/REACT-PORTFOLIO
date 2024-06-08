@@ -6,42 +6,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 0% 5%, #d47197, transparent 10%), radial-gradient(circle at 100% 90%, #d47197, transparent 15%), radial-gradient(circle at center, #222831, #222831);
+  background:white
 }
 
 .total-app {
-  height: calc(100vh - 20px); 
-  width: calc(100vw - 20px); 
-  margin: 10px;
+  height: calc(100vh - 0px); 
+  width: calc(100vw - 0px); 
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  background-color: white;
 }
 
-.my-container{
+.topbar-and-scroll-div{
+  flex: 25;
+  background-color: white;
+}
+
+.side-nav{
   flex: 1;
-  background-color: black;
-  border-radius: 5px;
+  background: linear-gradient(to right, rgba(207, 207, 207, 0.693), white);
 }
-
-.topnav-and-content{
-  flex: 5;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.topnav{
-  flex: 1;
-  background-color: #d47197;
-  border-radius: 5px;
-}
-
-.content{
-  flex: 11;
-  background-color: antiquewhite;
-  border-radius: 5px;
-}
-
-

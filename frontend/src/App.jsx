@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Mycontainer from "./allpages/MyContainer/Mycontainer";
+import SideNav from "./components/SideNav";
 
 function App() {
 
   return (
     <div className="total-app">
-      <div className="my-container">
-        <Mycontainer />
+      <div className="topbar-and-scroll-div">
+        <div className="top-nav">
+
+        </div>
+        <div className="scroll-div">
+        
+        </div>
       </div>
-      <div className="topnav-and-content">
-        <div className="topnav">
-
-        </div>
-        <div className="content">
-
-        </div>
+      <div className="side-nav">
+        <SideNav />
       </div>
     </div>
   );
