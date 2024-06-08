@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Mycontainer from "./allpages/MyContainer/Mycontainer";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:8000/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
 
   return (
-    <div className="App">
-      <h1>{message}</h1>
+    <div className="total-app">
+      <div className="my-container">
+        <Mycontainer />
+      </div>
+      <div className="topnav-and-content">
+        <div className="topnav">
+
+        </div>
+        <div className="content">
+
+        </div>
+      </div>
     </div>
   );
 }

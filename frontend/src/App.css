@@ -1,42 +1,47 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 0% 5%, #d47197, transparent 10%), radial-gradient(circle at 100% 90%, #d47197, transparent 15%), radial-gradient(circle at center, #222831, #222831);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.total-app {
+  height: calc(100vh - 20px); 
+  width: calc(100vw - 20px); 
+  margin: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-container{
+  flex: 1;
+  background-color: black;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.topnav-and-content{
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.card {
-  padding: 2em;
+.topnav{
+  flex: 1;
+  background-color: #d47197;
+  border-radius: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+.content{
+  flex: 11;
+  background-color: antiquewhite;
+  border-radius: 5px;
 }
+
+
