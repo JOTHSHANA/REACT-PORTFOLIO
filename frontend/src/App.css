@@ -6,24 +6,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background:white
+  background: white
 }
 
 .total-app {
-  height: calc(100vh - 0px); 
-  width: calc(100vw - 0px); 
+  height: calc(100vh - 0px);
+  width: calc(100vw - 0px);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   background-color: white;
 }
 
-.topbar-and-scroll-div{
+.topbar-and-scroll-div {
   flex: 25;
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.side-nav{
+.top-nav {
+  background-color: var(--background);
+  flex: 2;
+}
+
+.scroll-div {
+  flex: 25;
+  background-color: antiquewhite;
+  overflow-y: scroll;
+}
+
+.side-nav {
   flex: 1;
   background: linear-gradient(to right, rgba(207, 207, 207, 0.693), white);
 }
