@@ -2,22 +2,13 @@ import React from 'react';
 import { styled } from '@mui/system';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import SchoolIcon from '@mui/icons-material/School';
-import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
-import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone';
-import PsychologyTwoToneIcon from '@mui/icons-material/PsychologyTwoTone';
-import AccountTreeTwoToneIcon from '@mui/icons-material/AccountTreeTwoTone';
-import PermPhoneMsgTwoToneIcon from '@mui/icons-material/PermPhoneMsgTwoTone';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import './component.css';
 
 // Create a custom-styled Tooltip
@@ -37,7 +28,6 @@ const CustomTooltip = styled(({ className, ...props }) => (
 });
 
 function SideNav() {
-
     const [state, setState] = React.useState({
         right: false,
     });
@@ -50,10 +40,10 @@ function SideNav() {
         setState({ ...state, [anchor]: open });
     };
 
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -62,68 +52,41 @@ function SideNav() {
             sx={{
                 width: 580,
                 height: '100%',
-                background: 'white'
+                background: 'var(--background)',
+                color: 'var(--text)',
+                padding: '10px'
             }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
             JOTHSHANA S M
-
-            {/* 
-
-<List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
-
-
         </Box>
     );
+
     return (
         <div className='total-side-bar'>
             <div className='student-info'>
                 <CustomTooltip title="Hire me" placement="left" arrow>
-                    <SchoolIcon sx={{ fontSize: "30px", color: "#363636", cursor: "pointer" }} onClick={toggleDrawer('right', true)} />
+                    <SchoolIcon sx={{ fontSize: "30px", color: "#12c5d1", cursor: "pointer" }} onClick={toggleDrawer('right', true)} />
                 </CustomTooltip>
             </div>
             <div className='page-icons-container'>
                 <div className='icons'>
                     <CustomTooltip title="Home" placement="left" arrow>
-                        <HomeTwoToneIcon sx={{ fontSize: "35px", color: "#363636", cursor: "pointer" }} onClick={() => scrollToSection('home')} />
+                        <HomeIcon sx={{ fontSize: "25px", color: "#12c5d1", cursor: "pointer", backgroundColor: "#333647", padding:"7px", borderRadius:"5px" }} onClick={() => scrollToSection('home')} />
                     </CustomTooltip>
                     <CustomTooltip title="About" placement="left" arrow>
-                        <InfoTwoToneIcon sx={{ fontSize: "30px", color: "#363636", cursor: "pointer" }} onClick={() => scrollToSection('about')} />
+                        <InfoIcon sx={{ fontSize: "25px", color: "#12c5d1", cursor: "pointer", backgroundColor: "#333647", padding:"7px", borderRadius:"5px"  }} onClick={() => scrollToSection('about')} />
                     </CustomTooltip>
                     <CustomTooltip title="Skills" placement="left" arrow>
-                        <PsychologyTwoToneIcon sx={{ fontSize: "35px", color: "#363636", cursor: "pointer" }} onClick={() => scrollToSection('skills')} />
+                        <ConstructionIcon sx={{ fontSize: "25px", color: "#12c5d1", cursor: "pointer", backgroundColor: "#333647", padding:"7px", borderRadius:"5px"  }} onClick={() => scrollToSection('skills')} />
                     </CustomTooltip>
                     <CustomTooltip title="Projects" placement="left" arrow>
-                        <AccountTreeTwoToneIcon sx={{ fontSize: "30px", color: "#363636", cursor: "pointer" }} onClick={() => scrollToSection('projects')} />
+                        <AccountTreeIcon sx={{ fontSize: "25px", color: "#12c5d1", cursor: "pointer", backgroundColor: "#333647", padding:"7px", borderRadius:"5px"  }} onClick={() => scrollToSection('projects')} />
                     </CustomTooltip>
                     <CustomTooltip title="Contact" placement="left" arrow>
-                        <PermPhoneMsgTwoToneIcon sx={{ fontSize: "33px", color: "#363636", cursor: "pointer" }} onClick={() => scrollToSection('contact')} />
+                        <PermPhoneMsgIcon sx={{ fontSize: "25px", color: "#12c5d1", cursor: "pointer", backgroundColor: "#333647", padding:"7px", borderRadius:"5px"  }} onClick={() => scrollToSection('contacts')} />
                     </CustomTooltip>
                 </div>
                 <Drawer
@@ -131,12 +94,9 @@ function SideNav() {
                     open={state['right']}
                     onClose={toggleDrawer('right', false)}
                 >
-                    {list()}
+                    {list('right')}
                 </Drawer>
             </div>
-
-
-
         </div>
     );
 }

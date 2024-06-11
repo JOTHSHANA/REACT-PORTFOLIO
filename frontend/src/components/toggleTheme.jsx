@@ -4,9 +4,8 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import IconButton from '@mui/material/IconButton';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-
+import NightsStayIcon from '@mui/icons-material/NightsStay';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 // Define the theme
 const theme = createTheme({
     palette: {
@@ -15,7 +14,7 @@ const theme = createTheme({
 });
 
 const lightModeProperties = {
-    "--background": "rgb(201, 223, 226)",
+    "--background": "white",
     "--background-1": "#ffffff",
     "--button": "#178a84",
     "--text": "#00000a",
@@ -29,7 +28,7 @@ const lightModeProperties = {
 };
 
 const darkModeProperties = {
-    "--background": "#222831",
+    "--background": "#252734",
     "--background-1": "#31363F",
     "--button": "#178a84",
     "--text": "#e6e6e6",
@@ -80,7 +79,7 @@ export default function CustomizedSwitches() {
     return (
         <ThemeProvider theme={theme}>
             <IconButton sx={{ ml: 1 }} onClick={toggleDarkMode} color="inherit">
-                {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
+                {darkMode ? <WbSunnyIcon sx={{color: "#12c5d1"}}/> : <NightsStayIcon sx={{color: "#12c5d1"}}/>}
             </IconButton>
         </ThemeProvider>
     );

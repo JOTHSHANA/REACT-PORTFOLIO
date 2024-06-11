@@ -1,38 +1,43 @@
-import React from 'react'
-import './content.css'
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import AOS from 'aos';
+import React from 'react';
+import './content.css';
 
+import AOS from 'aos';
+import Home from './Home';
+import About from './About';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contacts from './Contacts';
+import SideNav from '../components/SideNav';
+import TopNav from '../components/TopNav';
 
 function PortfolioContent() {
-    
     return (
         <div className='total-content'>
-            <div className='home' id='home'>
-                <div className='contact-icons'>
-                    <div className='each-icon'>
-                        <WhatsAppIcon sx={{ fontSize: "30px", backgroundColor: "#25D366", color: "white", padding: "3px", borderRadius: "10px" }} />
-                    </div>
-                    <div className='each-icon'>
-                        <InstagramIcon sx={{ background: "linear-gradient(135deg, #f9ce34, #ee2a7b,#6228d7)", color: "#FFF", borderRadius: "10px", padding: "3px",fontSize: "30px" }} />
-                    </div>
-                </div>
+          <div className='top-component'>
+              <TopNav />
+          </div>
+            {/* <SideNav /> */}
+            <div id="home">
+                <Home />
             </div>
-            <div className='about' id='about'>
-
+            <hr />
+            <div id="about">
+                <About />
             </div>
-            <div className='skills' id='skills'>
-
+            <hr />
+            <div id="skills">
+                <Skills />
             </div>
-            <div className='projects' id='projects'>
-
+            <hr />
+            <div id="projects">
+                <Projects />
             </div>
-            <div className='contact' id='contact'>
-
+            <hr />
+            <div id="contacts">
+                <Contacts />
             </div>
         </div>
-    )
+    );
 }
 
-export default PortfolioContent
+export default PortfolioContent;
