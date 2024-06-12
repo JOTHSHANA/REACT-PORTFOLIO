@@ -20,6 +20,34 @@
     justify-content: center;
 }
 
+.large-name{
+    font-size: 70px;
+    margin: 0px;
+}
+
+
+.text-area-home{
+    height: 70%;
+    width: 70%;
+}
+@keyframes animate{
+    40%{
+        transform: translate(50px, 0) scale(.7);
+        opacity: 1;
+        color: white;
+    }
+    60%{
+        color: wheat;
+    }
+    80%{
+        transform: translate(0) scale(2);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}
 .about{
     width: 100%;
     height: 100vh;

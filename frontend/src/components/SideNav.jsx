@@ -10,6 +10,8 @@ import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import './component.css';
+import joImg from '../assets/joImg.jpg'
+
 
 // Create a custom-styled Tooltip
 const CustomTooltip = styled(({ className, ...props }) => (
@@ -50,17 +52,34 @@ function SideNav() {
     const list = (anchor) => (
         <Box
             sx={{
-                width: 580,
+                width: 500,
                 height: '100%',
                 background: 'var(--background)',
                 color: 'var(--text)',
-                padding: '10px'
+                padding: '20px 20px 0px 20px',
+                overflow: 'hidden'
             }}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
+            onClick={toggleDrawer(anchor, true)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            JOTHSHANA S M
+            <div className='side-profile'>
+                <div className='photo'>
+                    <img className='joImg' src={joImg} alt="" />
+                </div>
+                <div className='info'>
+                    <h3>Wanna hier mee!!</h3>
+                    <button>button</button>
+                </div>
+                <div className='drawer'>
+                    <div style={{height:"40px", width:"100%", backgroundColor:"#191b23", borderRadius:"10px 10px 0px 0px", display:"flex", alignItems:"center", justifyContent:"center"}}>
+                        <div style={{height:"10px", width:"100px", backgroundColor:"#252734", borderRadius:"20px"}}></div>
+                    </div>
+                    <div style={{}}>
+
+                    </div>
+                </div>
+            </div>
         </Box>
     );
 

@@ -36,7 +36,7 @@ body {
 .scroll-div {
   flex: 25;
   overflow-y: scroll;
-  background-color: #333647;
+  background-image: var(--grad);
 }
 
 .side-nav {
