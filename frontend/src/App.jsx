@@ -25,11 +25,11 @@ function App() {
           {/* <PortfolioContent /> */}
           <Routes>
             <Route path="/" element={<PortfolioContent />} />
-            <Route path="/home" element={<Home />} />
+            {/* <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contacts />} />
+            <Route path="/contact" element={<Contacts />} /> */}
           </Routes>
         </div>
         <div className="side-nav">

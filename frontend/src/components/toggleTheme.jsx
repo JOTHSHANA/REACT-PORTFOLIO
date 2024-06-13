@@ -16,8 +16,10 @@ const theme = createTheme({
 const lightModeProperties = {
     "--background": "white",
     "--background-1": "#ffffff",
+    "--icons":"#025a63",
+    "--icons-bg": "#bde7ec",
     "--button": "#178a84",
-    "--text": "#00000a",
+    "--text": "#191b23",
     "--gray-text": "rgb(79, 79, 79)",
     "--button-hover": "#178a84c2",
     "--button-hover-1": "rgb(182, 224, 229)",
@@ -31,6 +33,8 @@ const lightModeProperties = {
 const darkModeProperties = {
     "--background": "#252734",
     "--background-1": "#333647",
+    "--icons":"#12c5d1",
+    "--icons-bg":"#333647",
     "--button": "#178a84",
     "--text": "#e6e6e6",
     "--gray-text": "rgb(255, 255, 255)",
@@ -81,7 +85,7 @@ export default function CustomizedSwitches() {
     return (
         <ThemeProvider theme={theme}>
             <IconButton sx={{ ml: 1 }} onClick={toggleDarkMode} color="inherit">
-                {darkMode ? <WbSunnyIcon sx={{ color: "#12c5d1" }} /> : <NightsStayIcon sx={{ color: "#12c5d1" }} />}
+                {darkMode ? <WbSunnyIcon sx={{ color: "var(--icons)" }} /> : <NightsStayIcon sx={{ color: "var(--icons)" }} />}
             </IconButton>
         </ThemeProvider>
     );

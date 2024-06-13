@@ -29,7 +29,7 @@
 
 .side-profile {
     padding: 10px;
-    height: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -42,7 +42,10 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 30px;
+    padding: 10px 0px;
     flex: 1;
+    border-radius: 5px;
 }
 
 .joImg {
@@ -52,17 +55,45 @@
 
 .info {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .drawer {
     background-color: #252734;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     flex: 2;
     border-radius: 20px 20px 0px 0px;
     border: 10px solid #191b23;
-    border-bottom: none;
+    bottom: 0;
+    position: absolute;
 }
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.pdf-view {
+    height: 93%;
+}
+
+.button{
+    background-color: #12c5d1;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
 
 /* top-nav */
 
