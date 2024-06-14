@@ -3,6 +3,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import home from '../assets/home.png';
+import TelegramIcon from '@mui/icons-material/Telegram';
 function Home() {
 
   // let observer = new IntersectionObserver( (entries, observer) => {  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('aos-animate'); }else{ entry.target.classList.remove('aos-animate'); } }); }); document.querySelectorAll('[data-aos]').forEach(aosElem => { observer.observe(aosElem) });
@@ -59,6 +60,11 @@ function Home() {
         <div className='each-icon'>
           <a href="https://github.com/JOTHSHANA" target="_blank" rel="noopener noreferrer">
             <GitHubIcon sx={{ background: "#181717", color: "#FFF", borderRadius: "10px", padding: "3px", fontSize: "30px", border: "0.001px solid gray" }} />
+          </a>
+        </div>
+        <div className='each-icon'>
+          <a href="https://t.me/+917306176900" target="_blank" rel="noopener noreferrer">
+            <TelegramIcon sx={{ background: "#0088cc", color: "#FFF", borderRadius: "10px", padding: "3px", fontSize: "30px" }} />
           </a>
         </div>
       </div>

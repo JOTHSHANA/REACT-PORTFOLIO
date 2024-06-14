@@ -10,8 +10,13 @@ import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import './component.css';
-import joImg from '../assets/joImg.jpg'
-
+import joImg from '../assets/joImg.jpg';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import ArticleIcon from '@mui/icons-material/Article';
+import { useNavigate } from 'react-router-dom';
 // Create a custom-styled Tooltip
 const CustomTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} classes={{ popper: className }} />
@@ -34,6 +39,13 @@ function SideNav() {
         right: false,
     });
     const [drawerVisible, setDrawerVisible] = useState(false);
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/githubprojects');
+        setState({ right: true });
+
+    }
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -44,6 +56,11 @@ function SideNav() {
         if (!open) {
             setDrawerVisible(false);
         }
+    };
+
+    const handleClick = () => {
+        toggleDrawer(false);
+        handleNavigate();
     };
 
     const scrollToSection = (sectionId) => {
@@ -68,27 +85,28 @@ function SideNav() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <div className='side-profile'>
-                <div className='photo'  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10" >
-                <div style={{display:"flex", flexDirection:"column", gap:"20px"}}>
-                        <div style={{backgroundColor:"var(--background-1)", padding:"7px 10px", borderRadius:"5px", border: "2px solid var(--icons)"}}>ic1</div>
-                        <div style={{backgroundColor:"var(--background-1)", padding:"7px 10px", borderRadius:"5px", border: "2px solid var(--icons)"}}>ic2</div>
-                        <div style={{backgroundColor:"var(--background-1)", padding:"7px 10px", borderRadius:"5px", border: "2px solid var(--icons)"}}>ic3</div>
+                <div onClick={() => { handleNavigate() }} className='github-explore-button' data-aos="fade-down" data-aos-duration="800" data-aos-delay="10">
+                    HOVER ME!
+                </div>
+                <div className='photo'>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                        <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><WhatsAppIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
+                        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><InstagramIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
+                        <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><GitHubIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
+                        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="10" className='profile-icons' ><TelegramIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
                     </div>
-                    <img className='joImg' src={joImg} alt="" />
-                    
+                    <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="10" className='joImg' src={joImg} alt="" />
+
                 </div>
                 <div className='info'>
-                    <h4 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10" style={{textAlign:"center", letterSpacing:"1px", padding:"0px 27px"}}>Hi, I'm Jothshana S M! A dedicated web developer with a passion for creating stunning digital experiences. Currently pursuing a Bachelor of Engineering at Bannari Amman Institute of Technology, Erode, Tamil Nadu.</h4>
-                    <button data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10" className='button' onClick={() => setDrawerVisible(!drawerVisible)}>Explore my Resume</button>
+                    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10" style={{ letterSpacing: "0px", padding: "0px 27px", fontWeight: "500", color: "var(--icons)" }}>Hi, I'm Jothshana S M! A dedicated web developer with a passion for creating stunning digital experiences. Currently pursuing a Bachelor of Engineering at Bannari Amman Institute of Technology, Erode, Tamil Nadu.</p>
+                    <button data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10" className='button' onClick={() => setDrawerVisible(!drawerVisible)}><ArticleIcon /> Download Curriculum Vitae</button>
                 </div>
                 {drawerVisible && (
                     <div className='drawer' data-aos="fade-up">
-                        <div style={{ height: "40px", width: "100%",border:"1px solid black", backgroundColor: "var(--background)", borderRadius: "10px 10px 0px 0px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                            <div></div>
-                            <div></div>
-                            <div style={{ height: "10px", width: "100px", backgroundColor: "#252734", borderRadius: "20px" }}></div>
+                        <div style={{ height: "40px", width: "100%", border: "1px solid black", backgroundColor: "var(--background)", borderRadius: "10px 10px 0px 0px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                             <div className='download-button'>
-                                <button className='button' onClick={() => {
+                                <button className='button' style={{ position: "relative", left: "0" }} onClick={() => {
                                     const link = document.createElement('a');
                                     link.href = `https://drive.google.com/uc?export=download&id=${pdfLink}`;
                                     link.download = 'file.pdf';

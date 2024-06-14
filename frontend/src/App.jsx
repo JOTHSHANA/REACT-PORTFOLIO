@@ -9,6 +9,7 @@ import About from "./allpages/About";
 import Skills from "./allpages/Skills";
 import Projects from "./allpages/Projects";
 import Contacts from "./allpages/Contacts";
+import GithubProjects from "./allpages/GithubProjects";
 
 
 
@@ -25,6 +26,7 @@ function App() {
           {/* <PortfolioContent /> */}
           <Routes>
             <Route path="/" element={<PortfolioContent />} />
+            <Route path="/githubprojects" element={<GithubProjects/>} />
             {/* <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/skills" element={<Skills />} />

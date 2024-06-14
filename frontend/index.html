@@ -10,12 +10,21 @@
 </head>
 
 <body>
+  <!-- <div class="custom-cursor" id="customCursor"></div> -->
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
+  <!-- <script>
+    document.addEventListener('mousemove', function (e) {
+      const cursor = document.getElementById('customCursor');
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+  </script> -->
 </body>
 
 </html>
