@@ -38,7 +38,7 @@
     align-items: center;
 }
 
-a{
+a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,24 +50,28 @@ a{
     color: var(--icons);
 }
 
-.home-img{
+.home-img {
     height: 100%;
     animation: float 5s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
+
+    0%,
+    100% {
+        transform: translateY(0);
     }
+
     50% {
-      transform: translateY(-20px); /* Adjust the floating distance as needed */
+        transform: translateY(-20px);
+        /* Adjust the floating distance as needed */
     }
-  }
+}
 
 
 
 
-  /* ABOUT */
+/* ABOUT */
 
 
 
@@ -79,14 +83,65 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--icons);
+}
+
+
+.paragraph {
+    font-size: 16px;
+    color: var(--icons);
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-indent: 5rem;
+}
+
+.page-content {
+    height: 100%;
+    width: 90%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.floating-box {
+    padding: 12px 15PX;
+    border: 2px solid var(--icons);
+    margin: 5px;
+    width: fit-content;
+    color: var(--icons-rev);
+    letter-spacing: 0px;
+    font-weight: 700;
+    border-radius: 5px;
+    background-image: var(--float);
+}
+
+.image-section {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.content-section {
+    flex: 2.5;
+}
+
+.topics {
+    color: var(--text);
 }
 
 .sample {
     width: 50%;
 }
 
-.text-area-about, .text-area-skills, .text-area-projects{
-    background-color: gray;
+.text-area-about,
+.text-area-skills,
+.text-area-projects {
+    /* background-color: gray; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -94,9 +149,12 @@ a{
     width: 90%;
 }
 
-.text-area-about>p, .text-area-skills>p, .text-area-projects>p{
+.text-area-about>p,
+.text-area-skills>p,
+.text-area-projects>p {
     margin: 0;
 }
+
 
 
 
@@ -114,6 +172,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--icons);
 }
 
 .projects {
@@ -122,6 +181,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--icons);
 }
 
 .contact {
@@ -130,6 +190,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--icons);
 }
 
 .contact-icons {

@@ -42,7 +42,6 @@ function SideNav() {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate('/githubprojects');
         setState({ right: true });
 
     }
@@ -85,9 +84,7 @@ function SideNav() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <div className='side-profile'>
-                <div onClick={() => { handleNavigate() }} className='github-explore-button' data-aos="fade-down" data-aos-duration="800" data-aos-delay="10">
-                    HOVER ME!
-                </div>
+                
                 <div className='photo'>
                     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                         <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><WhatsAppIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
