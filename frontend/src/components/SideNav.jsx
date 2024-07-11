@@ -45,6 +45,7 @@ function SideNav() {
         setState({ right: true });
 
     }
+    
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -132,7 +133,10 @@ function SideNav() {
         <div className='total-side-bar'>
             <div className='student-info'>
                 <CustomTooltip title="Hire me" placement="left" arrow>
-                    <SchoolIcon sx={{ fontSize: "30px", color: "var(--icons)", cursor: "pointer" }} onClick={toggleDrawer('right', true)} />
+                    <SchoolIcon sx={{ fontSize: '30px',
+                            color: 'var(--icons)',
+                            cursor: 'pointer',
+                            }} onClick={toggleDrawer('right', true)} />
                 </CustomTooltip>
             </div>
             <div className='page-icons-container'>
