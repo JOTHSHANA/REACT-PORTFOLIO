@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/system';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import SchoolIcon from '@mui/icons-material/School';
@@ -45,7 +45,7 @@ function SideNav() {
         setState({ right: true });
 
     }
-    
+
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -85,7 +85,7 @@ function SideNav() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <div className='side-profile'>
-                
+
                 <div className='photo'>
                     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                         <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><WhatsAppIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
@@ -129,14 +129,47 @@ function SideNav() {
         </Box >
     );
 
+
+    useEffect(() => {
+        const handleKeydown = (event) => {
+            if (event.ctrlKey) {
+                if (event.key === 'h') {
+                    event.preventDefault();
+                    scrollToSection('home');
+                } else if (event.key === 'a') {
+                    event.preventDefault();
+                    scrollToSection('about');
+                } else if (event.key === 's') {
+                    event.preventDefault();
+                    scrollToSection('skills');
+                } else if (event.key === 'p') {
+                    event.preventDefault();
+                    scrollToSection('projects');
+                } else if (event.key === 'c') {
+                    event.preventDefault();
+                    scrollToSection('contacts');
+                }
+            }
+        };
+
+        // Add the event listener
+        window.addEventListener('keydown', handleKeydown);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('keydown', handleKeydown);
+        };
+    }, []);
+
     return (
         <div className='total-side-bar'>
             <div className='student-info'>
                 <CustomTooltip title="Hire me" placement="left" arrow>
-                    <SchoolIcon sx={{ fontSize: '30px',
-                            color: 'var(--icons)',
-                            cursor: 'pointer',
-                            }} onClick={toggleDrawer('right', true)} />
+                    <SchoolIcon sx={{
+                        fontSize: '30px',
+                        color: 'var(--icons)',
+                        cursor: 'pointer',
+                    }} onClick={toggleDrawer('right', true)} />
                 </CustomTooltip>
             </div>
             <div className='page-icons-container'>

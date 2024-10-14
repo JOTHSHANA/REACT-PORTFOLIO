@@ -31,7 +31,7 @@ function About() {
                             <div className='floating-box' data-aos="fade-left" data-aos-duration="1000" data-aos-delay="10">JOTHSHANA S M</div>
                             <div className='floating-box' data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200"> PASSIONATE WEB DEVELOPER</div>
                         </div>
-                        <img data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="10" style={{ height: "60%" }} className='abt-img' src={about} alt="image" />
+                        <img data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="10" style={{ height: "250px" }} className='abt-img' src={about} alt="image" />
                     </div>
                 </div>
             </div>
