@@ -42,6 +42,7 @@ function Contacts() {
                 <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="5" style={{ fontSize: "18px" }}><b>CONTACT ME</b></p>
                 <p data-aos="fade-down" data-aos-duration="700" data-aos-delay="5"><b>__Get In Touch__</b></p>
                 <div className='page-content'>
+                <div className='page-contents'>
                     <img className='contact-img' src={contact} alt="contact me" />
                     <form className='contact-form' onSubmit={sendEmail}>
                         <label htmlFor='userName'>Your Name</label>
@@ -72,7 +73,7 @@ function Contacts() {
                         />
                         <button type='submit'>Send Message</button>
                     </form>
-                </div>
+                </div></div>
             </div>
 
         </div>
