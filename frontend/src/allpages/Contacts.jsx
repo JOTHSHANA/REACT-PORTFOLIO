@@ -42,38 +42,44 @@ function Contacts() {
                 <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="5" style={{ fontSize: "18px" }}><b>CONTACT ME</b></p>
                 <p data-aos="fade-down" data-aos-duration="700" data-aos-delay="5"><b>__Get In Touch__</b></p>
                 <div className='page-content'>
-                <div className='page-contents'>
-                    <img className='contact-img' src={contact} alt="contact me" />
-                    <form className='contact-form' onSubmit={sendEmail}>
-                        <label htmlFor='userName'>Your Name</label>
-                        <input
-                            type='text'
-                            id='userName'
-                            placeholder='Your Name'
-                            value={userName}
-                            onChange={(e) => setUserName(e.target.value)}
-                            required
-                        />
-                        <label htmlFor='userEmail'>Your Email</label>
-                        <input
-                            type='email'
-                            id='userEmail'
-                            placeholder='Your Email'
-                            value={userEmail}
-                            onChange={(e) => setUserEmail(e.target.value)}
-                            required
-                        />
-                        <label htmlFor='message'>Your Message</label>
-                        <textarea
-                            id='message'
-                            placeholder='Type your message here'
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}
-                            required
-                        />
-                        <button type='submit'>Send Message</button>
-                    </form>
-                </div></div>
+                    <div className='page-contents' data-aos="zoom-in"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <img className='contact-img shake-animation' src={contact} alt="contact me" data-aos="zoom-in"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-out" />
+                        <form className='contact-form' onSubmit={sendEmail} data-aos="fade-left"
+                            data-aos-duration="1000"
+                        >
+                            <label htmlFor='userName'>Your Name</label>
+                            <input
+                                type='text'
+                                id='userName'
+                                placeholder='Your Name'
+                                value={userName}
+                                onChange={(e) => setUserName(e.target.value)}
+                                required
+                            />
+                            <label htmlFor='userEmail'>Your Email</label>
+                            <input
+                                type='email'
+                                id='userEmail'
+                                placeholder='Your Email'
+                                value={userEmail}
+                                onChange={(e) => setUserEmail(e.target.value)}
+                                required
+                            />
+                            <label htmlFor='message'>Your Message</label>
+                            <textarea
+                                id='message'
+                                placeholder='Type your message here'
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                required
+                            />
+                            <button type='submit'>Send Message</button>
+                        </form>
+                    </div></div>
             </div>
 
         </div>

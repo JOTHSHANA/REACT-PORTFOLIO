@@ -7,7 +7,7 @@ function Projects() {
     return (
         <div className='projects' id='projects'>
             <div className='text-area-projects'>
-                <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="5" style={{ fontSize: "18px" }}><b>MY PROJECTS</b></p>
+                <p data-aos="flip-up" data-aos-duration="700" data-aos-delay="5" style={{ fontSize: "18px" }}><b>MY PROJECTS</b></p>
                 <p data-aos="fade-down" data-aos-duration="700" data-aos-delay="5"><b>__What I Did?__</b></p>
                 <div className='page-content'>
                     <div className='grid-container'>
