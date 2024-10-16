@@ -43,7 +43,7 @@ function Home() {
           </h1>
           <p className='intro-text' data-aos="fade-left" data-aos-duration="1000" data-aos-delay="10">A passionate WEB DEVELOPER</p>
         </div>
-        <img style={{height:"400px"}} data-aos="fade-left" data-aos-duration="1000" data-aos-delay="10" className='home-img' src={home} alt="image" />
+        <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="10" className='home-img' src={home} alt="image" />
       </div>
 
       <div className='contact-icons'>

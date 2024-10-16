@@ -7,7 +7,6 @@ import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contacts from './Contacts';
-import SideNav from '../components/SideNav';
 import TopNav from '../components/TopNav';
 
 function PortfolioContent() {
@@ -16,7 +15,6 @@ function PortfolioContent() {
           <div className='top-component'>
               <TopNav />
           </div>
-            {/* <SideNav /> */}
             <div id="home">
                 <Home />
             </div>

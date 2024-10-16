@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import SideNav from "./components/SideNav";
+import DownNav from "./components/DownNav";
 import TopNav from "./components/TopNav";
 import PortfolioContent from "./allpages/PortfolioContent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -20,7 +21,7 @@ function App() {
           <TopNav />
       </div> */}
       <div className="topbar-and-scroll-div">
-        
+
         <div className="scroll-div">
           {/* <PortfolioContent /> */}
           <Routes>
@@ -35,6 +36,9 @@ function App() {
         <div className="side-nav">
           <SideNav />
         </div>
+        {/* <div className="down-nav">
+          <SideNav />
+        </div> */}
       </div>
 
     </div>

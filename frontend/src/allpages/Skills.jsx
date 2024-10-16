@@ -59,7 +59,7 @@ function Skills() {
                     <section className="skillss">
                         <ul style={{ listStyle: "none", padding: 0 }}>
                             {skillsData.map((skill, index) => (
-                                <li key={index} style={{ display: 'inline-block', width: '18%' }}>
+                                <li data-aos="flip-left" data-aos-duration="1000" data-aos-delay="20" key={index} style={{ display: 'inline-block', width: '18%' }}>
                                     {/* Use skillsImages object to map skill name to image */}
                                     <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", gap: "10px" }}>
                                         <img data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" style={{ height: "70px", backgroundColor: "white", marginBottom: "10px", borderRadius: "5px", height: "60px", width: "60px", border: "2px solid var(--icons-rev)" }} src={skillsImages[skill.name]} alt={skill.name} />

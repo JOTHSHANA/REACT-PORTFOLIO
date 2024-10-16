@@ -36,10 +36,18 @@ body {
 .scroll-div {
   flex: 25;
   overflow-y: scroll;
+  overflow-x: hidden;
   background-image: var(--grad);
 }
 
 .side-nav {
   background-color: var(--background);
   flex: 1;
+}
+
+.down-nav {
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  width: 100%;
 }
