@@ -45,11 +45,11 @@ function Contacts() {
                     <div className='page-contents' data-aos="zoom-in"
                         data-aos-duration="1000"
                         data-aos-easing="ease-in-out">
-                       
-                            <img className='contact-img shake-animation' src={contact} alt="contact me" data-aos="zoom-in"
-                                data-aos-duration="1000"
-                                data-aos-easing="ease-in-out" />
-                     
+
+                        <img className='contact-img shake-animation' src={contact} alt="contact me" data-aos="zoom-in"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-out" />
+
                         <form className='contact-form' onSubmit={sendEmail} data-aos="fade-left"
                             data-aos-duration="1000"
                         >

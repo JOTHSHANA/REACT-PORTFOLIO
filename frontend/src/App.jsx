@@ -36,9 +36,9 @@ function App() {
         <div className="side-nav">
           <SideNav />
         </div>
-        {/* <div className="down-nav">
-          <SideNav />
-        </div> */}
+        <div className="down-nav">
+          <DownNav />
+        </div>
       </div>
 
     </div>

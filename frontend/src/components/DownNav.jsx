@@ -163,31 +163,27 @@ function DownNav() {
 
     return (
         <div className='total-side-bar'>
-            <div className='student-info'>
-                <CustomTooltip title="Hire me" placement="left" arrow>
-                    <SchoolIcon sx={{
-                        fontSize: '30px',
-                        color: 'var(--icons)',
-                        cursor: 'pointer',
-                    }} onClick={toggleDrawer('right', true)} />
-                </CustomTooltip>
-            </div>
+           
             <div className='page-icons-container'>
-                <div className='icons'>
+                <div className='icons-dn'>
+
                     <CustomTooltip title="Home" placement="left" arrow>
-                        <HomeIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('home')} />
+                        <HomeIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('home')} />
                     </CustomTooltip>
                     <CustomTooltip title="About" placement="left" arrow>
-                        <InfoIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('about')} />
+                        <InfoIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('about')} />
                     </CustomTooltip>
                     <CustomTooltip title="Skills" placement="left" arrow>
-                        <ConstructionIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('skills')} />
+                        <ConstructionIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('skills')} />
                     </CustomTooltip>
                     <CustomTooltip title="Projects" placement="left" arrow>
-                        <AccountTreeIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('projects')} />
+                        <AccountTreeIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('projects')} />
                     </CustomTooltip>
                     <CustomTooltip title="Contact" placement="left" arrow>
-                        <PermPhoneMsgIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('contacts')} />
+                        <PermPhoneMsgIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('contacts')} />
+                    </CustomTooltip>
+                    <CustomTooltip title="Hire me" placement="left" arrow>
+                        <SchoolIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", padding: "7px", borderRadius: "5px" }} onClick={toggleDrawer('right', true)} />
                     </CustomTooltip>
                 </div>
                 <Drawer

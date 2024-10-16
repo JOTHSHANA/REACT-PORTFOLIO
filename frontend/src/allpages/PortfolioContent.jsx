@@ -12,9 +12,9 @@ import TopNav from '../components/TopNav';
 function PortfolioContent() {
     return (
         <div className='total-content'>
-          <div className='top-component'>
-              <TopNav />
-          </div>
+            <div className='top-component'>
+                <TopNav />
+            </div>
             <div id="home">
                 <Home />
             </div>
