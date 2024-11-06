@@ -76,15 +76,7 @@ function Projects() {
                                 <p className='role'>Worked as a frontend developer<br></br> (React JS)</p>
                             </div>
                         </div>
-                        <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            <div className='project-image'>
-                                <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={stores} alt="image" />
-                            </div>
-                            <div className='project-info' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10">
-                                <p className='project-title'>Product Tracking System</p>
-                                <p className='role'>Worked as a frontend developer<br></br> (React JS) and played a small role in backend</p>
-                            </div>
-                        </div> */}
+                         */}
                     </div>
                 </div>
             </div>
