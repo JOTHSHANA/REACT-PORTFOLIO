@@ -163,7 +163,7 @@ function DownNav() {
 
     return (
         <div className='total-side-bar'>
-           
+
             <div className='page-icons-container'>
                 <div className='icons-dn'>
 

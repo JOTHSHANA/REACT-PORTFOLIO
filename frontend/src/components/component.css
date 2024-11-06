@@ -29,12 +29,11 @@
 
 .side-profile {
     padding: 10px;
-    
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    padding-bottom: 0px;
+    padding-bottom: 0px;    
 }
 
 .photo {
@@ -63,27 +62,42 @@
 }
 
 @keyframes shake {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    10%, 30%, 50%, 70%, 90% {
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
         transform: translateX(-5px);
     }
-    20%, 40%, 60%, 80% {
+
+    20%,
+    40%,
+    60%,
+    80% {
         transform: translateX(5px);
     }
 }
+
 @keyframes shine {
     0% {
         opacity: 0.5;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.5;
     }
 }
+
 .drawer {
     background-color: #252734;
     width: 90%;
@@ -95,12 +109,12 @@
     position: absolute;
 }
 
-.profile-icons{
+.profile-icons {
     background-color: var(--icons-bg);
     padding: 5px 7px;
     border-radius: 5px;
     display: flex;
-    align-items:center ;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -116,12 +130,12 @@
     height: 93%;
 }
 
-.button{
+.button {
     background-color: var(--icons-bg);
     color: var(--icons);
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     gap: 7px;
     border: none;
     padding: 10px 15px;
@@ -130,21 +144,7 @@
     font-weight: bold;
     cursor: pointer;
 }
-/* 
-.github-explore-button{
-    background-color: var(--icons-bg);
-    color: var(--icons);
-    font-weight: 600;
-    padding: 10px 20px;
-    width: 80%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    cursor: pointer;
-} */
+
 
 
 .github-explore-button {
@@ -161,8 +161,9 @@
     justify-content: center;
     margin: 10px;
     cursor: pointer;
-    
+
 }
+
 .github-explore-button::after {
     content: "EXPLORE GITHUB REPOSITORIES";
     position: absolute;
@@ -178,14 +179,16 @@
     background-color: inherit;
     border-radius: 5px;
 }
+
 .github-explore-button:hover::after {
     opacity: 1;
 }
+
 .github-explore-button:hover {
     color: var(--icons);
 }
 
-/* top-nav */
+
 
 .total-top-nav {
     width: 100%;
