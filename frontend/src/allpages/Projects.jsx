@@ -13,7 +13,6 @@ function Projects() {
                     <div className='grid-container'>
 
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={stores} alt="image" />
                             </div>
@@ -23,7 +22,6 @@ function Projects() {
                             </div>
                         </div>
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={inventory} alt="image" />
                             </div>
@@ -34,7 +32,6 @@ function Projects() {
                         </div>
 
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={files} alt="image" />
                             </div>
@@ -43,8 +40,7 @@ function Projects() {
                                 <p className='role'>Worked as fullstack developer<br></br> (React JS, Node JS, Express JS, MySql)</p>
                             </div>
                         </div>
-                        <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
+                        {/* <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={stores} alt="image" />
                             </div>
@@ -54,7 +50,6 @@ function Projects() {
                             </div>
                         </div>
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={inventory} alt="image" />
                             </div>
@@ -64,7 +59,6 @@ function Projects() {
                             </div>
                         </div>
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={stores} alt="image" />
                             </div>
@@ -74,7 +68,6 @@ function Projects() {
                             </div>
                         </div>
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={inventory} alt="image" />
                             </div>
@@ -84,7 +77,6 @@ function Projects() {
                             </div>
                         </div>
                         <div className="box" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="20">
-                            {/* <div class="ribbon">Inventory Management System</div> */}
                             <div className='project-image'>
                                 <img className='inventory-img' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="10" src={stores} alt="image" />
                             </div>
@@ -92,18 +84,10 @@ function Projects() {
                                 <p className='project-title'>Product Tracking System</p>
                                 <p className='role'>Worked as a frontend developer<br></br> (React JS) and played a small role in backend</p>
                             </div>
-                        </div>
-
-
-                        {/* <div class="box">Box 2</div>
-                        <div class="box">Box 3</div>
-                        <div class="box">Box 4</div>
-                        <div class="box">Box 5</div>
-                        <div class="box">Box 6</div> */}
+                        </div> */}
                     </div>
                 </div>
             </div>
-            {/* <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10">PROJECTS</h1> */}
         </div>
     )
 }

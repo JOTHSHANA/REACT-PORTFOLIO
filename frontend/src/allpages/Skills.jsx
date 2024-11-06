@@ -31,18 +31,18 @@ const skillsImages = {
 };
 
 const skillsData = [
-    { name: 'C Language', percentage: 80 },
-    { name: 'Python', percentage: 70 },
-    { name: 'HTML', percentage: 90 },
-    { name: 'CSS', percentage: 85 },
+    { name: 'C Language', percentage: 85 },
+    { name: 'Java', percentage: 80 },
+    { name: 'HTML', percentage: 95 },
+    { name: 'CSS', percentage: 95 },
     { name: 'JavaScript', percentage: 80 },
-    { name: 'React JS', percentage: 75 },
-    { name: 'Node JS', percentage: 70 },
-    { name: 'Express JS', percentage: 65 },
-    { name: 'MySql', percentage: 75 },
-    { name: 'Git', percentage: 80 },
-    { name: 'GitHub', percentage: 80 },
-    { name: 'Linux', percentage: 70 },
+    { name: 'React JS', percentage: 90 },
+    { name: 'Node JS', percentage: 80 },
+    { name: 'Express JS', percentage: 90 },
+    { name: 'MySql', percentage: 90 },
+    { name: 'Git', percentage: 90 },
+    { name: 'GitHub', percentage: 90 },
+    { name: 'Linux', percentage: 60 },
 ];
 
 function Skills() {
