@@ -30,6 +30,7 @@ const lightModeProperties = {
     "--card": "#ffff",
     "--grad": "linear-gradient(110deg, hsl(184deg 84% 45%) 0%, hsl(186deg 55% 81%) 32%, hsl(0deg 0% 100%) 48%, hsl(0deg 0% 100%) 58%, hsl(0deg 0% 100%) 100%)",
     "--float": "linear-gradient(115deg,hsl(232deg 17% 17%) 0%,hsl(232deg 17% 17%) 20%,hsl(232deg 17% 17%) 40%,hsl(231deg 17% 21%) 50%,hsl(231deg 16% 24%) 63%,hsl(231deg 16% 24%) 81%,hsl(231deg 16% 24%) 100%)",
+    "--nav" :"#ffffff"
 };
 
 const darkModeProperties = {
@@ -48,6 +49,7 @@ const darkModeProperties = {
     "--card": "#313342",
     "--grad": "linear-gradient(115deg,hsl(232deg 17% 17%) 0%,hsl(232deg 17% 17%) 20%,hsl(232deg 17% 17%) 40%,hsl(231deg 17% 21%) 50%,hsl(231deg 16% 24%) 63%,hsl(231deg 16% 24%) 81%,hsl(231deg 16% 24%) 100%);",
     "--float": "linear-gradient(110deg, hsl(184deg 84% 45%) 0%, hsl(186deg 55% 81%) 32%, hsl(0deg 0% 100%) 48%, hsl(0deg 0% 100%) 58%, hsl(0deg 0% 100%) 100%)",
+    "--nav" :"#343647"
 };
 
 // Set custom properties based on theme mode

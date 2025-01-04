@@ -15,6 +15,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import ArticleIcon from '@mui/icons-material/Article';
 import { useNavigate } from 'react-router-dom';
 // Create a custom-styled Tooltip
@@ -95,6 +96,7 @@ function SideNav() {
                     </div>
                     <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="10" className='joImg' src={joImg} alt="" />
 
+
                 </div>
                 <div className='info'>
                     <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="10" style={{ letterSpacing: "0px", padding: "0px 27px", fontWeight: "500", color: "var(--icons)" }}>Hi, I'm Jothshana S M! A dedicated web developer with a passion for creating stunning digital experiences. Currently pursuing a Bachelor of Engineering at Bannari Amman Institute of Technology, Erode, Tamil Nadu.</p>
@@ -145,6 +147,9 @@ function SideNav() {
                 } else if (event.key === 'p') {
                     event.preventDefault();
                     scrollToSection('projects');
+                } else if (event.key === 'r') {
+                    event.preventDefault();
+                    scrollToSection('certificates');
                 } else if (event.key === 'c') {
                     event.preventDefault();
                     scrollToSection('contacts');
@@ -185,6 +190,9 @@ function SideNav() {
                     </CustomTooltip>
                     <CustomTooltip title="Projects" placement="left" arrow>
                         <AccountTreeIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('projects')} />
+                    </CustomTooltip>
+                    <CustomTooltip title="Certificates" placement="left" arrow>
+                        <WorkspacePremiumIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('certificates')} />
                     </CustomTooltip>
                     <CustomTooltip title="Contact" placement="left" arrow>
                         <PermPhoneMsgIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", backgroundColor: "var(--icons-bg)", padding: "7px", borderRadius: "5px" }} onClick={() => scrollToSection('contacts')} />

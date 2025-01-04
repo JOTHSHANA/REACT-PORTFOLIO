@@ -6,6 +6,7 @@ import Home from './Home';
 import About from './About';
 import Skills from './Skills';
 import Projects from './Projects';
+import Certificates from './Certificates';
 import Contacts from './Contacts';
 import TopNav from '../components/TopNav';
 
@@ -29,6 +30,10 @@ function PortfolioContent() {
             <hr />
             <div id="projects">
                 <Projects />
+            </div>
+            <hr />
+            <div id="certificates">
+                <Certificates />
             </div>
             <hr />
             <div id="contacts">
