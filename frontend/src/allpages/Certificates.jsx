@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-material-ui-carousel';
 import './content.css'; // Ensure to style as needed
 import learningCertificate from '../assets/linux.png';
@@ -21,6 +21,16 @@ function Certificates() {
     const [activeCategory, setActiveCategory] = useState('learning');
     const [openPopup, setOpenPopup] = useState(false);
     const [popupImage, setPopupImage] = useState('');
+    const [groupSize, setGroupSize] = useState(window.innerWidth < 768 ? 1 : 2);
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setGroupSize(window.innerWidth < 768 ? 1 : 2);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const categories = {
         learning: [
@@ -83,7 +93,7 @@ function Certificates() {
                                     indicators={true}
                                     navButtonsAlwaysVisible={true}
                                 >
-                                    {groupCertificates(categories[activeCategory], 2).map((group, index) => (
+                                    {groupCertificates(categories[activeCategory], groupSize).map((group, index) => (
                                         <div key={index} className='certificate-group'>
                                             {group.map((cert) => (
                                                 <div key={cert.id} className='certificate-card' data-aos="flip-up" data-aos-duration="1000" data-aos-delay="20">
@@ -120,7 +130,7 @@ function Certificates() {
                                         onClick={() => setActiveCategory(category)}
                                     >
                                         {categoryIcons[category]}
-                                        {category.charAt(0).toUpperCase() + category.slice(1)}
+                                        <span className='button-words'>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
                                     </button>
                                 ))}
                             </div>

@@ -40,9 +40,9 @@ function App() {
           <DownNav />
         </div>
       </div>
-      <div className="under-developemnt">
+      {/* <div className="under-developemnt">
         This app is best viewed on a desktop. Mobile support is coming soon!
-      </div>
+      </div> */}
 
     </div>
   );

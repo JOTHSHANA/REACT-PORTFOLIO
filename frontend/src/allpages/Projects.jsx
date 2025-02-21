@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import inventory from '../assets/inventory.png';
 import stores from '../assets/stores.png';
 import files from '../assets/files.png';
+import edfn from '../assets/edfn.png';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -37,6 +38,11 @@ import eLearnFrame5 from '../assets/eLearn/frame5.png';
 import eLearnFrame6 from '../assets/eLearn/frame6.png';
 import eLearnFrame7 from '../assets/eLearn/frame7.png';
 import eLearnFrame8 from '../assets/eLearn/frame8.png';
+import edfn1 from '../assets/edfn/ss1.png';
+import edfn2 from '../assets/edfn/ss2.png';
+import edfn3 from '../assets/edfn/ss3.png';
+import edfn4 from '../assets/edfn/ss4.png';
+import edfn5 from '../assets/edfn/ss5.png';
 import eLearn from '../assets/eLearn.png'
 import { Divider } from '@mui/material';
 
@@ -105,8 +111,22 @@ const projectsData = [
             filesFrame6,
             filesFrame7
         ]
+    },
+    {
+        id: 5,
+        title: "Company Website",
+        role: "Worked as frontend developer (React JS)",
+        image: edfn,
+        github: "https://github.com/JOTHSHANA/EDFN-TECHNOLOGIES",
+        screenshots: [
+            edfn1,
+            edfn2,
+            edfn3,
+            edfn4,
+            edfn5,
+        ]
     }
-    
+
 ];
 
 function Projects() {
@@ -174,11 +194,11 @@ function Projects() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                View GitHub Repo
+                                View GitHub Repository
                             </Button>
                             <div className='screenshots' style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                                 {selectedProject.screenshots.map((screenshot, index) => (
-                                    <div key={index} style={{ position: 'relative', display: 'inline-block', width: "49%" }}>
+                                    <div key={index} style={{ position: 'relative', display: 'inline-block' }} className='image-popup'>
                                         <img
                                             src={screenshot}
                                             alt={`Screenshot ${index + 1}`}

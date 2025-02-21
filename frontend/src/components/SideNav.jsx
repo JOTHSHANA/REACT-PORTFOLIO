@@ -35,7 +35,7 @@ const CustomTooltip = styled(({ className, ...props }) => (
 });
 
 function SideNav() {
-    const [pdfLink, setPdfLink] = useState('1m4H0k5ZLh5X-FLMXkAVixcEnJaAvsTTf');
+    const [pdfLink, setPdfLink] = useState('1zOtAYg5h4BOBqxnOGan2TM_HF5ZpY45O');
     const [state, setState] = useState({
         right: false,
     });

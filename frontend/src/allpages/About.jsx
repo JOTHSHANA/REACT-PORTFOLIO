@@ -4,7 +4,7 @@ import about from '../assets/about.png';
 
 
 function About() {
-    const [pdfLink, setPdfLink] = useState('1be99xDKKUTejiqCpRd0bZjbCoYIZTCUf');
+    const [pdfLink, setPdfLink] = useState('1zOtAYg5h4BOBqxnOGan2TM_HF5ZpY45O');
     return (
         <div className='about' id='about'>
             <div className='text-area-about'>
