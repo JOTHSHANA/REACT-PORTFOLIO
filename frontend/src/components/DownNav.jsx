@@ -126,7 +126,7 @@ function DownNav() {
                         </CustomTooltip>
                     ))}
                     <CustomTooltip title="Hire me" placement="left" arrow>
-                        <SchoolIcon sx={{ flex: "0.8", fontSize: "25px", color: "var(--icons)", cursor: "pointer", borderRadius: "5px" }} onClick={() => setOpenProfilePopup(true)} />
+                        <SchoolIcon sx={{ fontSize: "25px", color: "var(--icons)", cursor: "pointer", borderRadius: "5px", paddingRight:"7px", paddingLeft:"5px"}} onClick={() => setOpenProfilePopup(true)} />
                     </CustomTooltip>
                 </div>
 
