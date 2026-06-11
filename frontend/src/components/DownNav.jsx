@@ -49,7 +49,7 @@ const sections = [
 
 function DownNav() {
     const [activeItem, setActiveItem] = useState('home');
-    const [pdfLink, setPdfLink] = useState('1zOtAYg5h4BOBqxnOGan2TM_HF5ZpY45O');
+    const [pdfLink, setPdfLink] = useState('1gVr5Q2U_YSUa_Pl4hvKmM8jEy5FNROYq');
     const [openProfilePopup, setOpenProfilePopup] = useState(false);
     const [openPdfPopup, setOpenPdfPopup] = useState(false);
     const navigate = useNavigate();
