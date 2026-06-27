@@ -329,13 +329,11 @@ a {
     padding: 10px;
     text-align: center;
     display: flex;
-    /* flex-direction: column; */
     border-radius: 5px;
     gap: 10px;
     background-color: var(--card);
     box-shadow: var(--icons) 0px 1px 2px 0px, var(--icons) 0px 0px 0px 0px;
     cursor: pointer;
-    /* width: 50%; */
 }
 
 
@@ -374,7 +372,6 @@ a {
 .inventory-img {
     max-width: 100%;
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
     background-color: white;
     border-radius: 5px;

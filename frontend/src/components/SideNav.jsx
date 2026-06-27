@@ -15,6 +15,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import ArticleIcon from '@mui/icons-material/Article';
 import { useNavigate } from 'react-router-dom';
@@ -89,10 +90,46 @@ function SideNav() {
 
                 <div className='photo'>
                     <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                        <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><WhatsAppIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
-                        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><InstagramIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
-                        <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'><GitHubIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
-                        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="10" className='profile-icons' ><TelegramIcon sx={{ color: "var(--icons)", fontSize: "30px" }} /></div>
+                        <a
+                            href="https://wa.me/918281352999"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
+                        >
+                            <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'>
+                                <WhatsAppIcon sx={{ color: "var(--icons)", fontSize: "30px" }} />
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/jothshana"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
+                        >
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="10" className='profile-icons'>
+                                <LinkedInIcon sx={{ color: "var(--icons)", fontSize: "30px" }} />
+                            </div>
+                        </a>
+                        <a
+                            href="https://github.com/JOTHSHANA"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
+                        >
+                            <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="10" className='profile-icons'>
+                                <GitHubIcon sx={{ color: "var(--icons)", fontSize: "30px" }} />
+                            </div>
+                        </a>
+                        <a
+                            href="https://t.me/+917306176900"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }} // Prevents default link styling from messing up your icon color
+                        >
+                            <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="10" className='profile-icons'>
+                                <TelegramIcon sx={{ color: "var(--icons)", fontSize: "30px" }} />
+                            </div>
+                        </a>
                     </div>
                     <img data-aos="fade-up" data-aos-duration="1000" data-aos-delay="10" className='joImg' src={joImg} alt="" />
 

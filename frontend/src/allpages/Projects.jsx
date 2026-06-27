@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import inventory from '../assets/inventory.png';
-import stores from '../assets/stores.png';
+import bakery from '../assets/bakery.png';
 import files from '../assets/files.png';
 import edfn from '../assets/edfn.png';
 import Dialog from '@mui/material/Dialog';
@@ -18,11 +18,17 @@ import inventoryFrame5 from '../assets/inventory/frame5.png';
 import inventoryFrame6 from '../assets/inventory/frame6.png';
 import inventoryFrame7 from '../assets/inventory/frame7.png';
 import inventoryFrame8 from '../assets/inventory/frame8.png';
-import storesFrame1 from '../assets/stores/frame1.png';
-import storesFrame2 from '../assets/stores/frame2.png';
-import storesFrame3 from '../assets/stores/frame3.png';
-import storesFrame4 from '../assets/stores/frame4.png';
-import storesFrame5 from '../assets/stores/frame5.png';
+import bakeryFrame1 from '../assets/bakery/frame1.png';
+import bakeryFrame2 from '../assets/bakery/frame2.png';
+import bakeryFrame3 from '../assets/bakery/frame3.png';
+import bakeryFrame4 from '../assets/bakery/frame4.png';
+import bakeryFrame5 from '../assets/bakery/frame5.png';
+import bakeryFrame6 from '../assets/bakery/frame6.png';
+import bakeryFrame7 from '../assets/bakery/frame7.png';
+import bakeryFrame8 from '../assets/bakery/frame8.png';
+import bakeryFrame9 from '../assets/bakery/frame9.png';
+import bakeryFrame10 from '../assets/bakery/frame10.png';
+import bakeryFrame11 from '../assets/bakery/frame11.png';
 import filesFrame1 from '../assets/files/frame1.png';
 import filesFrame2 from '../assets/files/frame2.png';
 import filesFrame3 from '../assets/files/frame3.png';
@@ -43,16 +49,18 @@ import edfn2 from '../assets/edfn/ss2.png';
 import edfn3 from '../assets/edfn/ss3.png';
 import edfn4 from '../assets/edfn/ss4.png';
 import edfn5 from '../assets/edfn/ss5.png';
-import eLearn from '../assets/eLearn.png'
+import eLearn from '../assets/eLearn.png';
 import { Divider } from '@mui/material';
 
+// ADD OR UPDATE THE "liveLink" PROPERTY HERE AS NEEDED
 const projectsData = [
     {
         id: 1,
         title: "E-Learning Platform",
-        role: "Worked as frontend developer (React JS)",
+        role: "Frontend Developer (React.js)",
         image: eLearn,
         github: "https://github.com/JOTHSHANA/E-LEARNING-PLATFORM",
+        liveLink: "https://techlehren-frontend.onrender.com/",
         screenshots: [
             eLearnFrame1,
             eLearnFrame2,
@@ -67,9 +75,10 @@ const projectsData = [
     {
         id: 2,
         title: "Inventory Management System",
-        role: "Worked as a frontend and backend developer (React JS, node JS, express JS, MySQL)",
+        role: "Full Stack Developer (React, Node.js, MySQL)",
         image: inventory,
         github: "https://github.com/Priyadarshan-B/bestshop_update",
+        liveLink: "https://app.bestshopsathy.in/",
         screenshots: [
             inventoryFrame1,
             inventoryFrame2,
@@ -82,26 +91,48 @@ const projectsData = [
         ]
     },
     {
-
         id: 3,
-        title: "Product Tracking System",
-        role: "Worked as a frontend developer (React JS) and played a small role in backend",
-        image: stores,
-        github: "https://github.com/JOTHSHANA/STORES",
+        title: "Company Website",
+        role: "Frontend Developer (React.js)",
+        image: edfn,
+        github: "https://github.com/JOTHSHANA/EDFN-TECHNOLOGIES",
+        liveLink: "https://www.edfntechnologies.com/",
         screenshots: [
-            storesFrame1,
-            storesFrame2,
-            storesFrame3,
-            storesFrame4,
-            storesFrame5
+            edfn1,
+            edfn2,
+            edfn3,
+            edfn4,
+            edfn5,
         ]
     },
     {
         id: 4,
+        title: "Bakery Billing System",
+        role: "Full Stack Developer (MERN Stack)",
+        image: bakery,
+        github: "https://github.com/JOTHSHANA/Bakery",
+        liveLink: "",
+        screenshots: [
+            bakeryFrame1,
+            bakeryFrame2,
+            bakeryFrame3,
+            bakeryFrame4,
+            bakeryFrame5,
+            bakeryFrame6,
+            bakeryFrame7,
+            bakeryFrame8,
+            bakeryFrame9,
+            bakeryFrame10,
+            bakeryFrame11
+        ]
+    },
+    {
+        id: 5,
         title: "File Management System",
-        role: "Worked as fullstack developer (React JS, Node JS, Express JS, MySql)",
+        role: "Full Stack Developer (React, Node.js, MySQL)",
         image: files,
         github: "https://github.com/JOTHSHANA/ShareMonitor",
+        liveLink: "",
         screenshots: [
             filesFrame1,
             filesFrame2,
@@ -112,21 +143,6 @@ const projectsData = [
             filesFrame7
         ]
     },
-    {
-        id: 5,
-        title: "Company Website",
-        role: "Worked as frontend developer (React JS)",
-        image: edfn,
-        github: "https://github.com/JOTHSHANA/EDFN-TECHNOLOGIES",
-        screenshots: [
-            edfn1,
-            edfn2,
-            edfn3,
-            edfn4,
-            edfn5,
-        ]
-    }
-
 ];
 
 function Projects() {
@@ -186,16 +202,32 @@ function Projects() {
                         </DialogTitle>
                         <Divider />
                         <DialogContent>
-                            <p>{selectedProject.role}</p>
-                            <Button
-                                variant="contained"
-                                color="primary"
-                                href={selectedProject.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                View GitHub Repository
-                            </Button>
+
+                            {/* Flex container to keep GitHub and Live Link buttons side by side */}
+                            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '20px' }}>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    href={selectedProject.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View GitHub Repository
+                                </Button>
+
+                                {selectedProject.liveLink && (
+                                    <Button
+                                        variant="contained"
+                                        color="secondary"
+                                        href={selectedProject.liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Live Demo
+                                    </Button>
+                                )}
+                            </div>
+
                             <div className='screenshots' style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                                 {selectedProject.screenshots.map((screenshot, index) => (
                                     <div key={index} style={{ position: 'relative', display: 'inline-block' }} className='image-popup'>
